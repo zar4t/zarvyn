@@ -1,4 +1,4 @@
-# Newolf — Threat Model
+# Zarvyn — Threat Model
 
 **Phase:** 00 — Research & Environment Charter  
 **Owner:** Luan Thales  
@@ -8,7 +8,7 @@
 
 ## Overview
 
-This document captures the threat model I built for Newolf during Phase 00.
+This document captures the threat model I built for Zarvyn during Phase 00.
 The goal was to identify what needs to be protected, where the system is weak,
 and how an attacker could exploit those weaknesses before I write a single line
 of production code. I used two frameworks: STRIDE to categorize threat types,
@@ -17,17 +17,17 @@ and PASTA to connect those threats to real attack scenarios and mitigations.
 ---
 
 > **Scope of this document:** this iteration of the threat model covers only
-> the secrets management surface of Newolf (API, storage, and identity/access
-> control around secrets). Newolf's full scope is broader — see
+> the secrets management surface of Zarvyn (API, storage, and identity/access
+> control around secrets). Zarvyn's full scope is broader — see
 > `PROJECT-CHARTER.md`. This document will expand as new components are
 > threat-modeled.
 
 ## 1. STRIDE
 
-I applied STRIDE to map the six threat categories against Newolf's core design
+I applied STRIDE to map the six threat categories against Zarvyn's core design
 as a multi-tenant secrets management API.
 
-| Category | How it applies to Newolf |
+| Category | How it applies to Zarvyn |
 |---|---|
 | Spoofing | An attacker uses a stolen credential or token to impersonate a legitimate user or tenant |
 | Tampering | The API accepts a valid token but fails to verify ownership — attacker modifies or replaces another tenant's API key |
@@ -42,7 +42,7 @@ as a multi-tenant secrets management API.
 
 ### Stage 1 — Objectives
 
-Three things I need to protect in Newolf, and why they matter:
+Three things I need to protect in Zarvyn, and why they matter:
 
 1. **Client secrets and credentials** — if a secret leaks, the client loses
 control of their own systems. That is a direct business failure, not just
@@ -51,7 +51,7 @@ a technical one.
 2. **Tenant isolation** — if one tenant can see another's data, every client
 is affected at once. Trust breaks for all of them simultaneously.
 
-3. **Service availability** — if Newolf goes down, clients cannot authenticate
+3. **Service availability** — if Zarvyn goes down, clients cannot authenticate
 their apps, run automations or access their secrets. That means broken
 operations, financial loss, SLA violations and reputation damage.
 
@@ -59,7 +59,7 @@ operations, financial loss, SLA violations and reputation damage.
 
 For this analysis I focused on three core components:
 
-1. **Newolf API** — the main entry point. Every request passes through here,
+1. **Zarvyn API** — the main entry point. Every request passes through here,
 so authentication, authorization and input validation all live in this layer.
 
 2. **Secrets storage** — where the most sensitive client data lives. Getting
@@ -71,7 +71,7 @@ allowed to do.
 
 ### Stage 3 — Decomposition
 
-This is the flow of a single request to store a secret in Newolf:
+This is the flow of a single request to store a secret in Zarvyn:
 
 1. Client sends an HTTP request with the secret in the request body
 2. API receives the request
@@ -90,7 +90,7 @@ Covered by STRIDE in Section 1 of this document.
 
 ### Stage 5 — Vulnerabilities
 
-These are the specific weaknesses I identified in Newolf at this stage:
+These are the specific weaknesses I identified in Zarvyn at this stage:
 
 1. Insufficient identity and permission validation
 2. Inadequate tenant isolation at the API layer

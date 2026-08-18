@@ -1,6 +1,6 @@
-# Newolf
+# Zarvyn
 
-[![Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/zar4t/newolf)
+[![Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/zar4t/zarvyn)
 [![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org/)
 [![Docker](https://img.shields.io/badge/Docker-planned-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
@@ -22,7 +22,7 @@
 
 ## Project Description
 
-**Newolf** is a cloud-native, multi-tenant platform that stores and manages
+**Zarvyn** is a cloud-native, multi-tenant platform that stores and manages
 secrets and credentials for client organizations.
 
 The project demonstrates applied cloud security and DevSecOps practices
@@ -40,7 +40,7 @@ The project demonstrates:
 
 ## Current Status
 
-Newolf is in its foundational phase. Security design comes first: the threat
+Zarvyn is in its foundational phase. Security design comes first: the threat
 model, project charter and purple team rules are complete and committed before
 any production code is written.
 
@@ -133,7 +133,7 @@ captures the context, the decision itself and its consequences.
 ## Project Structure
 
 ```
-newolf/
+zarvyn/
 ├── src/ # Application source code
 │ ├── api/ # API endpoints and routing
 │ ├── auth/ # Authentication and authorization

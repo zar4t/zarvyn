@@ -5,7 +5,7 @@
 
 ## Context
 
-Newolf stores secrets and credentials belonging to client organizations.
+Zarvyn stores secrets and credentials belonging to client organizations.
 A design flaw in tenant isolation or access control would not be a bug —
 it would be a breach affecting every client at once.
 

@@ -1,4 +1,4 @@
-# Newolf — Project Charter
+# Zarvyn — Project Charter
 
 **Phase:** 00 — Research & Environment Charter
 **Owner:** Luan Thales
@@ -6,18 +6,18 @@
 
 ---
 
-## What is Newolf?
-Newolf is a cloud-native, multi-tenant platform built as an engineering
+## What is Zarvyn?
+Zarvyn is a cloud-native, multi-tenant platform built as an engineering
 laboratory. Its purpose is to design, validate, and continuously improve
 secure architectures by combining software engineering, cloud computing,
 and security practices in realistic and measurable scenarios.
 
 ## Who owns the project?
-Newolf is an independent project created and maintained by Luan Thales
+Zarvyn is an independent project created and maintained by Luan Thales
 as part of the NEURION engineering initiative.
 
 ## What problem does it solve?
-Newolf was created to explore how modern cloud applications can be designed
+Zarvyn was created to explore how modern cloud applications can be designed
 with security from the beginning instead of treating it as an afterthought.
 The project transforms security concepts into practical engineering experiments
 that can be built, tested, measured, documented, and continuously improved.

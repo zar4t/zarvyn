@@ -1,6 +1,6 @@
 # Naming & Formatting Conventions
 
-I set these conventions to keep the Newolf codebase clean, predictable, and easy to maintain as the project grows.
+I set these conventions to keep the Zarvyn codebase clean, predictable, and easy to maintain as the project grows.
 
 ## Files & Folders
 - Use lowercase letters with hyphens (`kebab-case`).

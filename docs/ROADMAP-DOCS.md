@@ -32,5 +32,5 @@ section signals abandonment, not ambition.
 
 1. A section is written when its subject exists, never before.
 2. Offensive documentation is always paired with the corresponding defense.
-3. All attack documentation refers to the controlled Newolf lab only.
+3. All attack documentation refers to the controlled Zarvyn lab only.
 4. No metric is published unless it was actually measured.

@@ -1,4 +1,4 @@
-# Newolf — Purple Team Charter
+# Zarvyn — Purple Team Charter
 
 **Phase:** 00 — Research & Environment Charter
 **Owner:** Luan Thales
@@ -11,13 +11,13 @@
 The Purple Team exists to engineer resilient systems by building, challenging,
 measuring, and continuously improving every security control. Every attack is
 an experiment, every finding becomes knowledge, and every lesson strengthens
-Newolf.
+Zarvyn.
 
 ---
 
 ## Objectives
 
-- Build a safe and controlled laboratory to simulate realistic attacks against Newolf.
+- Build a safe and controlled laboratory to simulate realistic attacks against Zarvyn.
 - Validate that every security control works as expected under real attack scenarios.
 - Measure the effectiveness of prevention, detection, response, and recovery mechanisms.
 - Document every experiment with evidence, metrics, lessons learned, and technical conclusions.
@@ -49,18 +49,18 @@ Newolf.
 - Container security assessments (not yet implemented).
 - Infrastructure-as-Code security validation (not yet implemented).
 - Load, stress, or performance testing unrelated to security.
-- Any activity outside the authorized Newolf laboratory environment.
+- Any activity outside the authorized Zarvyn laboratory environment.
 
 ---
 
 ## Tools
 
-The Newolf Purple Team will use industry-standard tools to build, validate,
+The Zarvyn Purple Team will use industry-standard tools to build, validate,
 and improve the platform's security. These tools will be introduced gradually
 as the project evolves. The goal is not to collect tools, but to understand
 why each one exists, when it should be used, and what evidence it can produce.
 
-All experiments will be performed only in authorized and controlled Newolf
+All experiments will be performed only in authorized and controlled Zarvyn
 laboratory environments.
 
 **Red Team**
@@ -109,7 +109,7 @@ Some tools will support automation, testing, observability, and evidence collect
 - Prometheus & Grafana — Measure and visualize experiment results.
 - Wireshark / tcpdump — Analyze network traffic during experiments.
 
-This list is not final. As Newolf grows, new tools may be added and others
+This list is not final. As Zarvyn grows, new tools may be added and others
 may be replaced. Every tool must have a clear purpose, support a real
 experiment, and help produce measurable security improvements.
 
@@ -121,7 +121,7 @@ experiment, and help produce measurable security improvements.
    If I cannot explain what I am trying to validate, then I am not ready
    to run the experiment.
 
-2. **Only authorized Newolf laboratory environments may be used.**
+2. **Only authorized Zarvyn laboratory environments may be used.**
    No experiment will be executed against production systems, third-party
    services, or infrastructure outside the defined scope.
 
