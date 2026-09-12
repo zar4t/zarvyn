@@ -5,38 +5,44 @@
 [![Docker](https://img.shields.io/badge/Docker-planned-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
-> A multi-tenant API hardened for cloud-native security and governance — designed, attacked, detected and defended as a continuous engineering practice.
+> A multi-tenant secrets API being engineered from its threat model — with security decisions, failures and controls made explicit and measurable.
 
 ## Table of Contents
 
-- [Project Description](#project-description)
-- [Current Status](#current-status)
-- [Security Model](#security-model)
-- [Architecture](#architecture)
-- [Architecture Decisions](#architecture-decisions)
-- [Tech Stack](#tech-stack)
-- [Project Structure](#project-structure)
-- [Roadmap](#roadmap)
-- [Documentation](#documentation)
-- [License](#license)
+- [Zarvyn](#zarvyn)
+  - [Table of Contents](#table-of-contents)
+  - [Project Description](#project-description)
+  - [Current Status](#current-status)
+  - [Security Model](#security-model)
+  - [Architecture](#architecture)
+  - [Architecture Decisions](#architecture-decisions)
+  - [Tech Stack](#tech-stack)
+  - [Project Structure](#project-structure)
+  - [Roadmap](#roadmap)
+  - [Documentation](#documentation)
+  - [License](#license)
+  - [Author](#author)
 
 ## Project Description
 
 **Zarvyn** is a cloud-native, multi-tenant platform that stores and manages
 secrets and credentials for client organizations.
 
-The project demonstrates applied cloud security and DevSecOps practices
-through a real system — built while studying, not after. Every component is
-designed with a threat model first, then implemented, attacked in a controlled
-lab, and defended.
+The project is being built as an engineering system, not as a collection of
+isolated exercises. Security decisions are documented before implementation,
+then validated progressively through controlled experiments and measurable
+evidence.
 
-The project demonstrates:
+Current evidence includes:
 - Threat modeling before implementation (STRIDE, PASTA, Attack Trees)
-- Multi-tenant isolation and least-privilege access control
-- Secrets management with encryption at rest
-- Audit logging and detection engineering
-- Infrastructure as Code with security scanning
-- CI/CD pipelines with integrated security gates
+- Defined tenant-isolation and least-privilege requirements
+- Project scope and security boundaries
+- Purple-team operating rules
+- Architecture Decision Records (ADRs)
+
+Planned capabilities such as encryption at rest, audit logging, Infrastructure
+as Code, CI/CD security gates and observability will only be presented as
+implemented evidence after they exist in the repository and can be reproduced.
 
 ## Current Status
 
@@ -44,15 +50,15 @@ Zarvyn is in its foundational phase. Security design comes first: the threat
 model, project charter and purple team rules are complete and committed before
 any production code is written.
 
-| Area | State |
-|---|---|
-| Threat model (STRIDE, PASTA, Attack Trees) | Complete |
-| Project charter and scope | Complete |
-| Purple team charter and lab rules | Complete |
-| Architecture decision records | In progress |
-| API implementation | Not started |
-| Infrastructure as Code | Not started |
-| CI/CD pipeline | Not started |
+| Area                                       | State       |
+| ------------------------------------------ | ----------- |
+| Threat model (STRIDE, PASTA, Attack Trees) | Complete    |
+| Project charter and scope                  | Complete    |
+| Purple team charter and lab rules          | Complete    |
+| Architecture decision records              | In progress |
+| API implementation                         | Not started |
+| Infrastructure as Code                     | Not started |
+| CI/CD pipeline                             | Not started |
 
 ## Security Model
 
@@ -60,13 +66,13 @@ Security is designed before code, not added after. The current threat model
 covers six STRIDE categories and two full attack scenarios, documented in
 [`docs/THREAT-MODEL.md`](docs/THREAT-MODEL.md).
 
-| Principle | How it applies |
-|---|---|
-| **Least privilege** | Every identity gets only what it needs |
-| **Tenant isolation** | No tenant can reach another tenant's data |
+| Principle            | How it applies                                          |
+| -------------------- | ------------------------------------------------------- |
+| **Least privilege**  | Every identity gets only what it needs                  |
+| **Tenant isolation** | No tenant can reach another tenant's data               |
 | **Defense in depth** | Multiple independent layers, no single point of failure |
-| **Auditability** | Every sensitive action is logged and attributable |
-| **Zero trust** | Authorization enforced server-side on every request |
+| **Auditability**     | Every sensitive action is logged and attributable       |
+| **Zero trust**       | Authorization enforced server-side on every request     |
 
 ## Architecture
 
@@ -114,21 +120,21 @@ Significant design decisions are recorded as ADRs (Architecture Decision
 Records) in [`docs/architecture/adr/`](docs/architecture/adr/). Each record
 captures the context, the decision itself and its consequences.
 
-| ADR | Decision |
-|---|---|
+| ADR                                                            | Decision                         |
+| -------------------------------------------------------------- | -------------------------------- |
 | [0001](docs/architecture/adr/0001-threat-model-before-code.md) | Threat model before writing code |
 
 ## Tech Stack
 
-| Category | Technology |
-|----------|------------|
-| **API Core** | Python 3.12 (FastAPI) |
-| **Data Layer** | PostgreSQL |
-| **Containerization** | Docker |
-| **Infrastructure** | Terraform, AWS |
-| **CI/CD** | GitHub Actions with security gates |
-| **Security Scanning** | Trivy, Checkov, SAST/SCA |
-| **Observability** | OpenTelemetry, Prometheus, Grafana |
+| Category              | Technology                         |
+| --------------------- | ---------------------------------- |
+| **API Core**          | Python 3.12 (FastAPI)              |
+| **Data Layer**        | PostgreSQL                         |
+| **Containerization**  | Docker                             |
+| **Infrastructure**    | Terraform, AWS                     |
+| **CI/CD**             | GitHub Actions with security gates |
+| **Security Scanning** | Trivy, Checkov, SAST/SCA           |
+| **Observability**     | OpenTelemetry, Prometheus, Grafana |
 
 ## Project Structure
 
