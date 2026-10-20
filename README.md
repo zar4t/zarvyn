@@ -1,8 +1,7 @@
 # Zarvyn
 
-[![Status](https://img.shields.io/badge/Status-In%20Development-orange)](https://github.com/zar4t/zarvyn)
-[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)](https://www.python.org/)
-[![Docker](https://img.shields.io/badge/Docker-planned-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+[![Phase](https://img.shields.io/badge/Phase%200-Security%20design%20complete-green)](docs/THREAT-MODEL.md)
+[![Phase](https://img.shields.io/badge/Phase%201-API%20implementation%20next-orange)](#roadmap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
 
 > A multi-tenant secrets API being engineered from its threat model — with security decisions, failures and controls made explicit and measurable.
@@ -50,15 +49,15 @@ Zarvyn is in its foundational phase. Security design comes first: the threat
 model, project charter and purple team rules are complete and committed before
 any production code is written.
 
-| Area                                       | State       |
-| ------------------------------------------ | ----------- |
-| Threat model (STRIDE, PASTA, Attack Trees) | Complete    |
-| Project charter and scope                  | Complete    |
-| Purple team charter and lab rules          | Complete    |
-| Architecture decision records              | In progress |
-| API implementation                         | Not started |
-| Infrastructure as Code                     | Not started |
-| CI/CD pipeline                             | Not started |
+| Area                                       | State                    |
+| ------------------------------------------ | ------------------------ |
+| Threat model (STRIDE, PASTA, Attack Trees) | Complete                 |
+| Project charter and scope                  | Complete                 |
+| Purple team charter and lab rules          | Complete                 |
+| Architecture decision records              | In progress (1 recorded) |
+| API implementation                         | Not started              |
+| Infrastructure as Code                     | Not started              |
+| CI/CD pipeline                             | Not started              |
 
 ## Security Model
 
@@ -126,6 +125,9 @@ captures the context, the decision itself and its consequences.
 
 ## Tech Stack
 
+Planned stack. Each item moves to the Current Status table only once it is
+implemented and reproducible in this repository.
+
 | Category              | Technology                         |
 | --------------------- | ---------------------------------- |
 | **API Core**          | Python 3.12 (FastAPI)              |
@@ -138,35 +140,39 @@ captures the context, the decision itself and its consequences.
 
 ## Project Structure
 
+What exists today:
+
 ```
 zarvyn/
-├── src/ # Application source code
-│ ├── api/ # API endpoints and routing
-│ ├── auth/ # Authentication and authorization
-│ ├── tenants/ # Multi-tenant isolation logic
-│ ├── secrets/ # Secret storage and encryption
-│ ├── audit/ # Audit logging
-│ └── models/ # Data models
-├── tests/ # Automated test suites
-│ ├── unit/ # Unit tests
-│ ├── integration/ # Integration tests
-│ └── security/ # Security-focused test cases
-├── infra/ # Infrastructure as Code
-│ ├── terraform/ # AWS provisioning
-│ └── docker/ # Container configuration
-├── docs/ # Project documentation
-│ ├── PROJECT-CHARTER.md # Project scope and goals
-│ ├── THREAT-MODEL.md # STRIDE, PASTA and Attack Trees
-│ ├── PURPLE-TEAM-CHARTER.md # Purple team mission and rules
-│ ├── CONVENTIONS.md # Naming and formatting standards
-│ └── architecture/ # Architecture diagrams and decisions
-├── labs/ # Purple team experiments and findings
-├── .github/workflows/ # CI/CD pipelines
-├── .gitignore # Git ignore rules
-└── LICENSE # MIT License
+├── docs/
+│   ├── PROJECT-CHARTER.md      # Scope, goals and boundaries
+│   ├── THREAT-MODEL.md         # STRIDE, PASTA and attack trees
+│   ├── PURPLE-TEAM-CHARTER.md  # Purple team mission and lab rules
+│   ├── CONVENTIONS.md          # Naming and formatting standards
+│   ├── ROADMAP-DOCS.md         # When each documentation section is added
+│   └── architecture/
+│       ├── README.md
+│       └── adr/                # Architecture Decision Records
+├── CHANGELOG.md
+├── LICENSE
+└── README.md
 ```
 
+Directories for source code (`src/`), tests (`tests/`), infrastructure
+(`infra/`), labs (`labs/`) and CI (`.github/workflows/`) are added in the phase
+that implements them, following the rule in
+[`docs/ROADMAP-DOCS.md`](docs/ROADMAP-DOCS.md): nothing is documented before it exists.
+
 ## Roadmap
+
+**Phase 0 — Security design (complete)**
+
+- [x] Project charter, scope and boundaries
+- [x] Threat model: STRIDE, PASTA and attack trees
+- [x] Purple team charter and lab rules
+- [x] First ADR: threat model before code
+
+**Phase 1 onward — Implementation**
 
 - [ ] Core API with robust tenant isolation
 - [ ] Authentication & authorization layer (RBAC/ABAC)
@@ -189,4 +195,4 @@ This project is licensed under the MIT License — see the [LICENSE](LICENSE) fi
 
 ## Author
 
-**Luan Thales** — [GitHub](https://github.com/zar4t)
+**Luan Thales** — Cloud Security Specialist · [LinkedIn](https://www.linkedin.com/in/luanthales) · [GitHub](https://github.com/zar4t)
