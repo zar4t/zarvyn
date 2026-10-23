@@ -1,8 +1,8 @@
 # Zarvyn — Project Charter
 
-**Phase:** 00 — Research & Environment Charter
+**Phase:** 0 — Security design
 **Owner:** Luan Thales
-**Status:** In progress
+**Status:** Complete
 
 ---
 
@@ -13,8 +13,7 @@ secure architectures by combining software engineering, cloud computing,
 and security practices in realistic and measurable scenarios.
 
 ## Who owns the project?
-Zarvyn is an independent project created and maintained by Luan Thales
-as part of the NEURION engineering initiative.
+Zarvyn is an independent project created and maintained by Luan Thales.
 
 ## What problem does it solve?
 Zarvyn was created to explore how modern cloud applications can be designed
