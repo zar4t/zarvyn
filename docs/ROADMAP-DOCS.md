@@ -15,6 +15,9 @@ section signals abandonment, not ambition.
 | Current Status | `README.md` |
 | Architecture | `docs/architecture/` |
 | Architecture Decision Records | `docs/architecture/adr/` |
+| Contributing Guidelines | `CONTRIBUTING.md` |
+| Security Policy | `SECURITY.md` |
+| Portuguese README | `README.pt-BR.md` |
 
 ## Planned
 
@@ -26,7 +29,6 @@ section signals abandonment, not ambition.
 | How to Defend | Paired with How to Attack — never published alone |
 | Metrics | Observability is in place and numbers are real |
 | Deployment Guide | Infrastructure is provisioned |
-| Contributing Guidelines | The project accepts external contributions |
 
 ## Rules
 
