@@ -1,8 +1,8 @@
 # Zarvyn — Purple Team Charter
 
-**Phase:** 00 — Research & Environment Charter
+**Phase:** 0 — Security design
 **Owner:** Luan Thales
-**Status:** In progress
+**Status:** Complete
 
 ---
 
