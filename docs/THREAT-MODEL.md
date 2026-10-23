@@ -1,14 +1,14 @@
 # Zarvyn — Threat Model
 
-**Phase:** 00 — Research & Environment Charter  
+**Phase:** 0 — Security design  
 **Owner:** Luan Thales  
-**Status:** In progress  
+**Status:** Complete (first iteration)  
 
 ---
 
 ## Overview
 
-This document captures the threat model I built for Zarvyn during Phase 00.
+This document captures the threat model I built for Zarvyn during Phase 0.
 The goal was to identify what needs to be protected, where the system is weak,
 and how an attacker could exploit those weaknesses before I write a single line
 of production code. I used two frameworks: STRIDE to categorize threat types,
