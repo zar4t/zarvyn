@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/zarvyn-banner.svg" alt="Zarvyn: secrets used, never shown" width="100%"></p>
+
 # Zarvyn
 
 **English** | [Português](README.pt-BR.md)
@@ -14,6 +16,7 @@
 - [Current Status](#current-status)
 - [Security Model](#security-model)
 - [Architecture](#architecture)
+- [Target Architecture](#target-architecture)
 - [Architecture Decisions](#architecture-decisions)
 - [Tech Stack](#tech-stack)
 - [Project Structure](#project-structure)
@@ -119,6 +122,15 @@ after them, it carries a verified identity and a defined set of permissions.
 
 Detailed diagrams and design notes live in [`docs/architecture/`](docs/architecture/).
 
+## Target Architecture
+
+Where Zarvyn is heading by v3: a bridge model with a shared control plane,
+pooled and siloed data cells, and AI agents that can use a credential without
+ever receiving it. Nothing in this diagram is implemented yet; the
+[Current Status](#current-status) table is the source of truth.
+
+![Zarvyn target architecture](docs/assets/zarvyn-architecture.svg)
+
 ## Architecture Decisions
 
 Significant design decisions are recorded as ADRs (Architecture Decision
@@ -156,6 +168,7 @@ zarvyn/
 │   ├── PURPLE-TEAM-CHARTER.md  # Purple team mission and lab rules
 │   ├── CONVENTIONS.md          # Naming and formatting standards
 │   ├── ROADMAP-DOCS.md         # When each documentation section is added
+│   ├── assets/                 # Banner and architecture figures
 │   └── architecture/
 │       ├── README.md           # Request flow and trust boundaries
 │       └── adr/                # Architecture Decision Records
