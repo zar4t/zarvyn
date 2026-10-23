@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/assets/zarvyn-banner.svg" alt="Zarvyn: segredos usados, nunca expostos" width="100%"></p>
+
 # Zarvyn
 
 [English](README.md) | **Português**
@@ -14,6 +16,7 @@
 - [Situação atual](#situação-atual)
 - [Modelo de segurança](#modelo-de-segurança)
 - [Arquitetura](#arquitetura)
+- [Arquitetura-alvo](#arquitetura-alvo)
 - [Decisões de arquitetura](#decisões-de-arquitetura)
 - [Stack](#stack)
 - [Estrutura do projeto](#estrutura-do-projeto)
@@ -122,6 +125,15 @@ permissões.
 
 Detalhes em [`docs/architecture/`](docs/architecture/) (em inglês).
 
+## Arquitetura-alvo
+
+Para onde o Zarvyn vai até a v3: modelo bridge, com plano de controle
+compartilhado, células de dados em pool e em silo, e agentes de IA que usam uma
+credencial sem nunca recebê-la. Nada deste diagrama está implementado ainda; a
+tabela de [Situação atual](#situação-atual) é a referência.
+
+![Arquitetura-alvo do Zarvyn](docs/assets/zarvyn-architecture.svg)
+
 ## Decisões de arquitetura
 
 Decisões relevantes são registradas como ADRs em
@@ -159,6 +171,7 @@ zarvyn/
 │   ├── PURPLE-TEAM-CHARTER.md  # Missão e regras de laboratório do purple team
 │   ├── CONVENTIONS.md          # Padrões de nomes e formatação
 │   ├── ROADMAP-DOCS.md         # Quando cada seção da documentação entra
+│   ├── assets/                 # Banner e figuras da arquitetura
 │   └── architecture/
 │       ├── README.md           # Fluxo da requisição e fronteiras de confiança
 │       └── adr/                # Registros de decisão de arquitetura
