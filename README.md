@@ -1,31 +1,36 @@
 # Zarvyn
 
+**English** | [Português](README.pt-BR.md)
+
 [![Phase](https://img.shields.io/badge/Phase%200-Security%20design%20complete-green)](docs/THREAT-MODEL.md)
 [![Phase](https://img.shields.io/badge/Phase%201-API%20implementation%20next-orange)](#roadmap)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow)](https://opensource.org/licenses/MIT)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache--2.0-blue)](LICENSE)
 
 > A multi-tenant secrets API being engineered from its threat model — with security decisions, failures and controls made explicit and measurable.
 
 ## Table of Contents
 
-- [Zarvyn](#zarvyn)
-  - [Table of Contents](#table-of-contents)
-  - [Project Description](#project-description)
-  - [Current Status](#current-status)
-  - [Security Model](#security-model)
-  - [Architecture](#architecture)
-  - [Architecture Decisions](#architecture-decisions)
-  - [Tech Stack](#tech-stack)
-  - [Project Structure](#project-structure)
-  - [Roadmap](#roadmap)
-  - [Documentation](#documentation)
-  - [License](#license)
-  - [Author](#author)
+- [Project Description](#project-description)
+- [Current Status](#current-status)
+- [Security Model](#security-model)
+- [Architecture](#architecture)
+- [Architecture Decisions](#architecture-decisions)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [Roadmap](#roadmap)
+- [Documentation](#documentation)
+- [Contributing and Security](#contributing-and-security)
+- [License](#license)
+- [Author](#author)
 
 ## Project Description
 
 **Zarvyn** is a cloud-native, multi-tenant platform that stores and manages
 secrets and credentials for client organizations.
+
+Credentials leak through code, chat, tickets and shared spreadsheets, and are
+rarely rotated. Zarvyn's goal is to keep each organization's secrets isolated,
+encrypted and auditable, so that every access can be traced to who made it and why.
 
 The project is being built as an engineering system, not as a collection of
 isolated exercises. Security decisions are documented before implementation,
@@ -77,6 +82,7 @@ covers six STRIDE categories and two full attack scenarios, documented in
 
 The core flow of a request to store a secret, as decomposed during threat
 modeling. Every step exists for a reason and maps to a specific threat.
+
 ```
 Client
 │
@@ -151,15 +157,18 @@ zarvyn/
 │   ├── CONVENTIONS.md          # Naming and formatting standards
 │   ├── ROADMAP-DOCS.md         # When each documentation section is added
 │   └── architecture/
-│       ├── README.md
+│       ├── README.md           # Request flow and trust boundaries
 │       └── adr/                # Architecture Decision Records
 ├── CHANGELOG.md
+├── CONTRIBUTING.md
 ├── LICENSE
-└── README.md
+├── README.md
+├── README.pt-BR.md
+└── SECURITY.md
 ```
 
 Directories for source code (`src/`), tests (`tests/`), infrastructure
-(`infra/`), labs (`labs/`) and CI (`.github/workflows/`) are added in the phase
+(`infra/`) and CI (`.github/workflows/`) are added in the phase
 that implements them, following the rule in
 [`docs/ROADMAP-DOCS.md`](docs/ROADMAP-DOCS.md): nothing is documented before it exists.
 
@@ -187,11 +196,19 @@ that implements them, following the rule in
 - [Project Charter](docs/PROJECT-CHARTER.md) — scope, goals and ownership
 - [Threat Model](docs/THREAT-MODEL.md) — STRIDE, PASTA and attack trees
 - [Purple Team Charter](docs/PURPLE-TEAM-CHARTER.md) — mission, scope and lab rules
+- [Architecture](docs/architecture/README.md) — request flow and trust boundaries
 - [Conventions](docs/CONVENTIONS.md) — naming and formatting standards
+
+## Contributing and Security
+
+Contributions are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md) first; every
+commit must be signed off (DCO). Report vulnerabilities privately as described in
+[SECURITY.md](SECURITY.md). Attack material in this repository targets the Zarvyn
+lab only and is limited to what is needed to prove a control.
 
 ## License
 
-This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+Licensed under the Apache License 2.0. See [LICENSE](LICENSE).
 
 ## Author
 
